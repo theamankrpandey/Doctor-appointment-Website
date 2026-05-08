@@ -894,3 +894,623 @@ margin-left:20px ;
   height: auto;
 }
 }
+
+/* ============================================================
+   RESPONSIVE MEDIA QUERIES — ADD AT THE BOTTOM OF YOUR CSS
+   Desktop layout is untouched. Only mobile/tablet/laptop fixes.
+   ============================================================ */
+
+/* ─── Small Laptops (max-width: 1024px) ─── */
+@media (max-width: 1024px) {
+
+  /* Navbar */
+  .navbar nav ul {
+    gap: 18px;
+  }
+  .login {
+    padding-right: 20px;
+  }
+
+  /* Hero */
+  .page1 {
+    height: 60vh;
+  }
+  .bio {
+    margin-top: 120px;
+    padding: 0 20px;
+  }
+  .page1child1 {
+    font-size: 38px;
+  }
+  .page1child2 {
+    font-size: 24px;
+  }
+
+  /* About section */
+  .page2 {
+    width: 55%;
+    padding-left: 5%;
+    padding-right: 5%;
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .page3 {
+    width: 45%;
+    height: auto;
+    min-height: 600px;
+  }
+
+  /* Services grid */
+  #service {
+    grid-template-columns: auto auto;
+  }
+
+  /* Contact form */
+  .page9-section {
+    padding: 40px 40px;
+  }
+  .page9-title {
+    font-size: 44px;
+  }
+
+  /* Sponsor logos */
+  .sponserImg {
+    gap: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+
+/* ─── Tablets (max-width: 768px) ─── */
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .navbar nav ul {
+    display: none;
+  }
+  .call {
+    display: none;
+  }
+  .login {
+    display: none;
+  }
+  #bar {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    left: auto;
+    font-size: 28px;
+    z-index: 200;
+  }
+  #check:checked ~ .navbar nav ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #2751A3;
+    text-align: center;
+    padding: 10px 0;
+    gap: 0;
+    z-index: 100;
+  }
+  #check:checked ~ .navbar nav ul li {
+    padding: 10px 0;
+  }
+  #check:checked ~ .navbar nav ul li a {
+    color: #f97425;
+    font-size: 16px;
+  }
+
+  /* Hero */
+  .page1 {
+    height: auto;
+    min-height: 50vh;
+    padding: 20px;
+  }
+  .bio {
+    margin-top: 80px;
+    padding: 0 15px 40px;
+  }
+  .page1child1 {
+    font-size: 30px;
+  }
+  .page1child2 {
+    font-size: 20px;
+  }
+  .Appoitmentbutton {
+    margin-top: 25px;
+    padding: 10px 18px;
+    font-size: 15px;
+  }
+
+  /* About section — stack vertically */
+  .section {
+    flex-direction: column;
+  }
+  .page2 {
+    width: 100%;
+    height: auto;
+    padding: 40px 30px;
+    box-sizing: border-box;
+  }
+  .page3 {
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Services grid — 2 columns */
+  #service {
+    grid-template-columns: auto auto;
+    padding: 30px 20px;
+  }
+  .services {
+    width: 220px;
+  }
+  .page4 p {
+    font-size: 32px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  /* Flu shot banner */
+  .container1 {
+    height: auto;
+    padding: 40px 20px;
+  }
+  .flushottext {
+    margin-left: 5%;
+  }
+  .container1 h1 {
+    font-size: 28px;
+  }
+
+  /* Partners / sponsors */
+  .page6 {
+    height: auto;
+    padding: 30px 20px;
+  }
+  .page6 h1 {
+    font-size: 26px;
+  }
+  .page6child2 {
+    font-size: 18px;
+  }
+  .page6child3 {
+    width: 90%;
+    font-size: 14px;
+  }
+  .sponserImg {
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 20px;
+    margin-top: 20px;
+  }
+
+  /* Brand logos */
+  .brandimage {
+    width: 70px;
+    height: 45px;
+  }
+  .brandimage1 {
+    width: 90px;
+    height: 40px;
+  }
+
+  /* Patient section */
+  #page5 {
+    height: auto;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .anchor {
+    margin-top: 30px;
+  }
+
+  /* Contact form */
+  .page9-section {
+    padding: 30px 20px;
+  }
+  .page9-title {
+    font-size: 32px;
+  }
+  .page9-container {
+    flex-direction: column;
+  }
+  .page9-left,
+  .page9-right {
+    width: 100%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+  }
+  .page9-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .page9-right h2 {
+    font-size: 28px;
+  }
+  .page9-right p {
+    font-size: 16px;
+  }
+  .page9-btn {
+    width: 100%;
+  }
+
+  /* Inline contact form */
+  .detail {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .form {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .fname,
+  .lname,
+  .gmail,
+  .phone,
+  .massage {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .summitbuttom {
+    padding: 12px 40px;
+  }
+  .summitbuttomparent {
+    justify-content: center;
+  }
+}
+
+
+/* ─── Mobile (max-width: 430px) ─── */
+@media (max-width: 430px) {
+
+  /* Navbar */
+  .navbar nav {
+    position: relative;
+    z-index: 99;
+  }
+  .navbar nav img {
+    width: 50px;
+    height: 25px;
+    padding-left: 15px;
+  }
+  .name {
+    font-size: 14px;
+  }
+  .family {
+    font-size: 14px;
+  }
+  #bar {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    left: auto;
+    font-size: 26px;
+    z-index: 200;
+  }
+  #check:checked ~ .navbar nav ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #2751A3;
+    text-align: center;
+    padding: 10px 0;
+    gap: 0;
+    z-index: 100;
+  }
+  #check:checked ~ .navbar nav ul li {
+    padding: 12px 0;
+  }
+  #check:checked ~ .navbar nav ul li a {
+    color: #f97425;
+    font-size: 15px;
+  }
+
+  /* Hero */
+  .page1 {
+    width: 100%;
+    height: auto;
+    min-height: 45vh;
+    padding: 10px;
+    background-position: center top;
+  }
+  .bio {
+    margin-top: 60px;
+    padding: 0 10px 40px;
+  }
+  .page1child1 {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+  .page1child2 {
+    font-size: 16px;
+  }
+  .Appoitmentbutton {
+    margin-top: 20px;
+    padding: 9px 16px;
+    font-size: 14px;
+  }
+
+  /* About section */
+  .section {
+    flex-direction: column;
+  }
+  .page2 {
+    width: 100%;
+    height: auto;
+    padding: 30px 20px;
+    box-sizing: border-box;
+  }
+  .page2 h1 {
+    font-size: 22px;
+  }
+  .page2 p {
+    font-size: 14px;
+  }
+  .readmore {
+    margin-bottom: 30px;
+    font-size: 14px;
+  }
+  .page3 {
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+  }
+
+  /* Services grid — single column */
+  .page4 {
+    width: 100%;
+    height: auto;
+    padding-bottom: 40px;
+  }
+  .page4 p {
+    font-size: 24px;
+    padding: 20px 15px 0;
+    text-align: center;
+  }
+  #service {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 20px 15px;
+    gap: 15px;
+  }
+  .services {
+    width: 90%;
+    max-width: 320px;
+    height: auto;
+  }
+  .img1, .img2, .img3,
+  .img4, .img5, .img6 {
+    height: 160px;
+    background-size: cover;
+  }
+  .services p {
+    font-size: 16px;
+    padding: 10px 5%;
+  }
+  .book {
+    margin-top: 15px;
+    padding-bottom: 15px;
+  }
+  .booknow {
+    margin-top: 15px;
+    margin-left: 10px;
+  }
+  .moreservice {
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+
+  /* Flu shot banner */
+  #page5 {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+  .container1 {
+    width: 100%;
+    height: auto;
+    padding: 30px 15px;
+    margin-top: 20px;
+    background-position: center;
+    box-sizing: border-box;
+  }
+  .flushottext {
+    margin-left: 3%;
+  }
+  .container1 h1 {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  /* About / why us */
+  .page6 {
+    width: 100%;
+    height: auto;
+    padding: 20px 15px;
+    box-sizing: border-box;
+  }
+  .page6container {
+    padding: 0 10px;
+  }
+  .page6 h1 {
+    font-size: 22px;
+    margin-top: 20px;
+  }
+  .page6child2 {
+    font-size: 15px;
+  }
+  .page6child3 {
+    width: 100%;
+    font-size: 13px;
+    margin-top: 20px;
+    padding: 0 5px;
+    box-sizing: border-box;
+  }
+
+  /* Divider */
+  .page7 {
+    padding: 10px 0;
+  }
+  .page7child1 {
+    width: 90%;
+  }
+
+  /* Sponsors */
+  .page8 {
+    height: auto;
+    padding: 20px 10px 30px;
+    box-sizing: border-box;
+  }
+  #brandname h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .sponserImg {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .brandimage {
+    width: 60px;
+    height: 38px;
+  }
+  .brandimage1 {
+    width: 75px;
+    height: 32px;
+  }
+  .anchor {
+    margin-top: 20px;
+  }
+  .patient {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  /* Contact form */
+  .page9-section {
+    padding: 20px 15px;
+  }
+  .page9-title {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+  .page9-container {
+    flex-direction: column;
+    border-radius: 0;
+  }
+  .page9-left,
+  .page9-right {
+    width: 100%;
+    padding: 20px 15px;
+    box-sizing: border-box;
+  }
+  .page9-row {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 15px;
+  }
+  .page9-group {
+    margin-bottom: 15px;
+  }
+  .page9-group label {
+    font-size: 12px;
+  }
+  .page9-message textarea {
+    height: 80px;
+  }
+  .page9-btn {
+    width: 100%;
+    font-size: 14px;
+    height: 44px;
+  }
+  .page9-right h2 {
+    font-size: 22px;
+  }
+  .page9-right p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .page9-footer {
+    font-size: 20px;
+  }
+  .page9-footer span {
+    font-size: 16px;
+  }
+  .page9-space {
+    margin-top: 25px;
+  }
+
+  /* Inline contact / login */
+  .loginparent,
+  .detail {
+    width: 95%;
+    height: auto;
+    padding: 20px 15px;
+    box-sizing: border-box;
+  }
+  .page9 .loginparent h2 {
+    font-size: 24px;
+  }
+  .form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+    padding: 0 5px;
+  }
+  .formchild {
+    width: 100%;
+  }
+  .fname,
+  .lname,
+  .gmail,
+  .phone,
+  .massage {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .loginchild {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .summitbuttom {
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+  .summitbuttomparent {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  /* Map section */
+  .mapparent {
+    flex-direction: column;
+  }
+  .page9child {
+    flex-direction: column;
+  }
+  .page9-map {
+    height: 220px;
+  }
+}

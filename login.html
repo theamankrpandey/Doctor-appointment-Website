@@ -1,0 +1,75 @@
+<!-- login.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | Brijesh Kr Pandey</title>
+
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="login-page">
+
+    <!-- Left Side -->
+    <div class="login-left">
+        <div class="overlay"></div>
+
+        <div class="left-content">
+            <h1>Welcome Back</h1>
+            <p>Login to manage appointments, patient records and contact with Dr. Brijesh Kr Pandey.</p>
+        </div>
+    </div>
+
+    <!-- Right Side -->
+    <div class="login-right">
+
+        <div class="login-box">
+
+            <h2>Login</h2>
+            <p class="sub-text">Access your account</p>
+
+            <form method="POST">
+                {% csrf_token %}
+
+                <div class="input-box">
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="Enter your email">
+                </div>
+
+                <div class="input-box">
+                    <label>Password</label>
+                    <input type="password" name="password" placeholder="Enter password">
+                </div>
+
+                <div class="remember-box">
+                    <label>
+                        <input type="checkbox"> Remember Me
+                    </label>
+
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="login-btn">
+                    Login
+                </button>
+
+                <p class="signup-text">
+                    Don't have account?
+                    <a href="{% url 'registration' %}">Register</a>
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

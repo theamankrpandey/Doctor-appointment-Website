@@ -1,0 +1,178 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f7fc;
+}
+
+/* Layout */
+.register-page{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+}
+
+/* Left Side */
+.register-left{
+    width:50%;
+    background-image:url('https://static.wixstatic.com/media/c837a6_4d6768bd8d584c358e45d8528340347b~mv2.jpg');
+    background-size:cover;
+    background-position:center;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(18,62,168,0.70);
+}
+
+.left-content{
+    position:relative;
+    z-index:2;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+.left-content h1{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.left-content p{
+    font-size:18px;
+    line-height:1.6;
+}
+
+/* Right */
+.register-right{
+    width:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:white;
+}
+
+.register-box{
+    width:450px;
+    padding:50px;
+    border-radius:20px;
+    box-shadow:0 0 30px rgba(0,0,0,0.08);
+}
+
+.register-box h2{
+    font-size:40px;
+    color:#2751A3;
+}
+
+.sub-text{
+    color:#777;
+    margin-top:8px;
+    margin-bottom:30px;
+}
+
+/* Inputs */
+.row{
+    display:flex;
+    gap:15px;
+}
+
+.input-box{
+    width:100%;
+    margin-bottom:20px;
+}
+
+.input-box label{
+    display:block;
+    margin-bottom:6px;
+    color:#2751A3;
+    font-size:14px;
+}
+
+.input-box input{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-bottom:2px solid #ccc;
+    outline:none;
+    transition:0.3s;
+}
+
+.input-box input:focus{
+    border-color:#2751A3;
+}
+
+/* Button */
+.register-btn{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:50px;
+    background:#f97425;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.register-btn:hover{
+    background:#d85c11;
+}
+
+/* Login */
+.login-text{
+    margin-top:20px;
+    text-align:center;
+}
+
+.login-text a{
+    color:#2751A3;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* Responsive */
+@media(max-width:900px){
+
+.register-page{
+    flex-direction:column;
+}
+
+.register-left,
+.register-right{
+    width:100%;
+}
+
+.register-left{
+    min-height:40vh;
+}
+
+.register-box{
+    width:100%;
+}
+
+.row{
+    flex-direction:column;
+}
+
+}
+
+@media(max-width:430px){
+
+.register-box{
+    padding:30px 20px;
+}
+
+.left-content h1{
+    font-size:30px;
+}
+
+}
